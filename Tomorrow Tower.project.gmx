@@ -9,7 +9,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\stick</object>
+    <object>objects\stick_lootet</object>
     <object>objects\tower</object>
   </objects>
   <help>
