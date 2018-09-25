@@ -10,6 +10,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\stick</object>
+    <object>objects\tower</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
