@@ -5,13 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\s_tower_mage</sprite>
+    <sprite>sprites\s_enemy_arrow</sprite>
+  </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
+  <scripts name="scripts">
+    <script>scripts\spawn.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\tower</object>
+    <object>objects\enemy_arrow</object>
+    <object>objects\enemy</object>
+    <object>objects\tower_mage</object>
+    <object>objects\control</object>
   </objects>
-  <rooms name="rooms"/>
+  <rooms name="rooms">
+    <room>rooms\ingame</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
