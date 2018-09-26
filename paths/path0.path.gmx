@@ -8,11 +8,11 @@
   <points>
     <point>0,48,100</point>
     <point>208,48,100</point>
-    <point>208,240,100</point>
-    <point>48,240,100</point>
-    <point>48,352,100</point>
-    <point>272,352,100</point>
-    <point>272,304,100</point>
+    <point>208,208,100</point>
+    <point>80,208,100</point>
+    <point>80,400,100</point>
+    <point>176,400,100</point>
+    <point>176,304,100</point>
     <point>368,304,100</point>
     <point>368,160,100</point>
     <point>496,160,100</point>
