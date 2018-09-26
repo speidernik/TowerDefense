@@ -32,8 +32,9 @@ wave = 0;
 current = 0;
 var arrow = 0;
 
-wave[1] = ds_queue_create();
+wave[2] = ds_queue_create();
 ds_queue_enqueue(wave[1],"arrow","arrow","arrow","arrow");
+ds_queue_enqueue(wave[2],"arrow","arrow","arrow","arrow", "arrow","arrow","arrow","arrow");
 alarm[0] = 60;
 </string>
           </argument>
