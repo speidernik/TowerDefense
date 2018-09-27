@@ -28,7 +28,7 @@
             <string>sp = 60;
 damage = 4;
 projec = proj_mage;
-range = 300;
+range = 140;
 
 alarm[0] = sp;
 </string>
@@ -60,6 +60,8 @@ alarm[0] = sp;
       shot.speed = 0;
       shot.dmg = damage;
       alarm[0] = sp;
+   }else{
+      alarm[0] = 1;
    }
 }else{
    alarm[0] = 1;
