@@ -15,7 +15,10 @@
     <sprite>sprites\s_enemy_sheep</sprite>
     <sprite>sprites\s_enemy_cross</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\b_testpath</background>
+    <background>background\b_testbuild</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
   </paths>
