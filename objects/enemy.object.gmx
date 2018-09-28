@@ -28,6 +28,41 @@
             <string>if(hp &lt;= 0){
    instance_destroy();
 }
+if(path_position == 1){
+   control.hp -= 1;
+   instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var nx = x*xrat;
+var ny = y*yrat;
+
+var hpr = hp/maxhp;
+
+draw_set_colour(c_red);
+draw_rectangle(nx-16*hpr,ny-24,nx+16*hpr,ny-20,0);
+draw_set_colour(c_white);
+draw_rectangle(nx-16,ny-24,nx+16,ny-20,1);
 </string>
           </argument>
         </arguments>

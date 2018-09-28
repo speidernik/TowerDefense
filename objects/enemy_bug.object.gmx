@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>sp = 0.6;
 hp = 200;
+maxhp = hp;
 path_start(control.path,sp,path_action_stop,1);
 </string>
           </argument>
@@ -50,11 +51,7 @@ path_start(control.path,sp,path_action_stop,1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(path_position == 1){
-   control.hp -= 1;
-}
-
-image_angle = point_direction(xprevious,yprevious,x,y);
+            <string>image_angle = point_direction(xprevious,yprevious,x,y);
 </string>
           </argument>
         </arguments>
