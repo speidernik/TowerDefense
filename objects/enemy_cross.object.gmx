@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sp = 1.7;
-hp = 20;
+            <string>sp = 2;
+hp = 10;
 path_start(control.path,sp,path_action_stop,1);
 </string>
           </argument>
@@ -54,7 +54,8 @@ path_start(control.path,sp,path_action_stop,1);
    control.hp -= 1;
 }
 
-image_angle = point_direction(xprevious,yprevious,x,y);
+image_angle += 2;
+
 </string>
           </argument>
         </arguments>
