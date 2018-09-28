@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\s_tower_mage</sprite>
     <sprite>sprites\s_enemy_arrow</sprite>
+    <sprite>sprites\s_enemy_bomber</sprite>
     <sprite>sprites\s_prog_mage</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -25,6 +26,7 @@
   <objects name="objects">
     <object>objects\tower</object>
     <object>objects\enemy_arrow</object>
+    <object>objects\enemy_bomber</object>
     <object>objects\enemy</object>
     <object>objects\tower_mage</object>
     <object>objects\control</object>
