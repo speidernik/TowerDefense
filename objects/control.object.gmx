@@ -40,7 +40,7 @@ wave[2] = ds_queue_create();
 
 draw_set_circle_precision(32);
 
-ds_queue_enqueue(wave[1],"bomber","arrow","bomber","arrow");
+ds_queue_enqueue(wave[1],"bug","sheep","cross","bomber");
 ds_queue_enqueue(wave[2],"arrow","arrow","bomber","arrow","bomber","arrow","bomber","arrow","bomber");
 
 
