@@ -28,6 +28,10 @@
             <string>if(hp &lt;= 0){
    instance_destroy();
 }
+if(path_position == 1){
+   control.hp -= 1;
+   instance_destroy();
+}
 </string>
           </argument>
         </arguments>
