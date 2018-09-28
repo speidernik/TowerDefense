@@ -10,7 +10,13 @@
     <sprite>sprites\s_enemy_arrow</sprite>
     <sprite>sprites\s_enemy_bomber</sprite>
     <sprite>sprites\s_prog_mage</sprite>
+<<<<<<< HEAD
     <sprite>sprites\s_pixel</sprite>
+=======
+    <sprite>sprites\s_enemy_bug</sprite>
+    <sprite>sprites\s_enemy_sheep</sprite>
+    <sprite>sprites\s_enemy_cross</sprite>
+>>>>>>> fb96584bc526eed7ee5d4d305707fce05d9067e6
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -34,6 +40,14 @@
       <object>objects\enemy_arrow</object>
     </objects>
     <object>objects\tower</object>
+<<<<<<< HEAD
+=======
+    <object>objects\enemy_arrow</object>
+    <object>objects\enemy_bomber</object>
+    <object>objects\enemy_sheep</object>
+    <object>objects\enemy_cross</object>
+    <object>objects\enemy_bug</object>
+>>>>>>> fb96584bc526eed7ee5d4d305707fce05d9067e6
     <object>objects\enemy</object>
     <objects name="Mage">
       <object>objects\tower_mage</object>
