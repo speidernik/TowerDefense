@@ -10,6 +10,9 @@
     <sprite>sprites\s_enemy_arrow</sprite>
     <sprite>sprites\s_enemy_bomber</sprite>
     <sprite>sprites\s_prog_mage</sprite>
+    <sprite>sprites\s_enemy_bug</sprite>
+    <sprite>sprites\s_enemy_sheep</sprite>
+    <sprite>sprites\s_enemy_cross</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -27,6 +30,9 @@
     <object>objects\tower</object>
     <object>objects\enemy_arrow</object>
     <object>objects\enemy_bomber</object>
+    <object>objects\enemy_sheep</object>
+    <object>objects\enemy_cross</object>
+    <object>objects\enemy_bug</object>
     <object>objects\enemy</object>
     <object>objects\tower_mage</object>
     <object>objects\control</object>
