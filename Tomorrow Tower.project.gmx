@@ -10,6 +10,7 @@
     <sprite>sprites\s_enemy_arrow</sprite>
     <sprite>sprites\s_enemy_bomber</sprite>
     <sprite>sprites\s_prog_mage</sprite>
+    <sprite>sprites\s_pixel</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -19,19 +20,28 @@
     <script>scripts\spawn.gml</script>
     <script>scripts\aim.gml</script>
     <script>scripts\inrange.gml</script>
+    <script>scripts\draw_tower.gml</script>
+    <script>scripts\tower_info.gml</script>
+    <script>scripts\tower_get_id.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
+    <font>fonts\font_ui</font>
   </fonts>
   <objects name="objects">
+    <objects name="Enemies">
+      <object>objects\enemy_bomber</object>
+      <object>objects\enemy_arrow</object>
+    </objects>
     <object>objects\tower</object>
-    <object>objects\enemy_arrow</object>
-    <object>objects\enemy_bomber</object>
     <object>objects\enemy</object>
-    <object>objects\tower_mage</object>
+    <objects name="Mage">
+      <object>objects\tower_mage</object>
+    </objects>
     <object>objects\control</object>
     <object>objects\proj</object>
     <object>objects\proj_mage</object>
+    <object>objects\part_explode</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\ingame</room>
