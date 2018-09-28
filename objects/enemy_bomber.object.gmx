@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>sp = 1.0;
 hp = 25;
+maxhp = hp;
 path_start(control.path,sp,path_action_stop,1);
 </string>
           </argument>

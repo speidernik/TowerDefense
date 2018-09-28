@@ -52,6 +52,10 @@
   <rooms name="rooms">
     <room>rooms\ingame</room>
   </rooms>
+  <constants number="2">
+    <constant name="xrat">view_wport/view_wview</constant>
+    <constant name="yrat">view_hport/view_hview</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

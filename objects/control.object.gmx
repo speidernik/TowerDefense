@@ -176,9 +176,6 @@ for(var i = 0;i &lt; 16;i ++){
    draw_tower(i,view_wport-ix+2,iy+2,88);
 }
 
-var xrat = view_wport/view_wview;
-var yrat = view_hport/view_hview;
-
 var mx = floor((mouse_x*xrat-(view_wport-360)) / 90);
 var my = floor(mouse_y*yrat/90);
 
