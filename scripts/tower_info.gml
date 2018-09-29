@@ -2,15 +2,19 @@ if(argument0 >= 0 && argument0 < 16){
    var tower_name = "";
    var tower_desc = "";
    var tower_id = -1;
+   //Info über Tower
+   
    switch(argument0){
       case 0: tower_id = tower_mage; tower_name = "Magician";tower_desc = "A slow shooting tower that deals heavy damage and can be upgraded into various forms." break;
    
-      case 1: tower_id = tower_fireMage; tower_name = "Fire Mage";tower_desc = "A fast shooting tower that deals small damage and can be upgraded into magma tower forms." break;
+      case 0.1: tower_id = tower_fireMage; tower_name = "Fire Mage";tower_desc = "A fast shooting tower that deals little damage and can be upgraded into magma tower forms." break;
    
-      case 2: tower_id = tower_magmaMage; tower_name = "Magma Mage";tower_desc = "A slow shooting tower that deals heavy damage." break;
+      case 0.11: tower_id = tower_magmaMage; tower_name = "Magma Mage";tower_desc = "A slow shooting tower that deals very heavy damage." break;
    }
    
+   //Info Ausgeben
    if(tower_name != "" && tower_desc != "" && tower_id != -1){
+      show_debug_message(tower_name);
       draw_text(view_wport-356,400,tower_name);
       draw_set_font(font_ui);
       draw_text_ext(view_wport-356,432,tower_desc,14,340);

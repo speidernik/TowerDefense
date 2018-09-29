@@ -109,6 +109,54 @@ alarm[0] = 60;
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="74">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///UI
+draw_set_font(font0);
+draw_text(4,2,"Wave: "+string(current));
+
+draw_set_colour($111111);
+draw_rectangle(view_wport-360,0,view_wport-1,view_hport,0);
+draw_set_colour(c_white);
+for(var i = 360;i &gt;= 0;i -= 90){
+   draw_line_width(view_wport-i,0,view_wport-i,360,2);
+}
+for(var i = 360;i &gt;= 0;i -= 90){
+   draw_line_width(view_wport-360,i,view_wport,i,2);
+}
+
+for(var i = 0;i &lt; 16;i ++){
+   var ix = 360-(i mod 4 * 90);
+   var iy = floor(i/4)*90;
+   draw_tower(i,view_wport-ix+2,iy+2,88);
+}
+
+var mx = floor((mouse_x*xrat-(view_wport-360)) / 90);
+var my = floor(mouse_y*yrat/90);
+
+if(mx &gt;= 0 &amp;&amp; my &lt; 4){
+   tower_info(mx+my*4);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="72">
       <action>
         <libid>1</libid>
@@ -135,53 +183,6 @@ var sx2 = path_get_x(path,0.01);
 var sy2 = path_get_y(path,0.01);
 
 draw_arrow(sx-1,sy-1,sx2-1,sy2-1,16);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_set_font(font0);
-draw_text(4,2,"Wave: "+string(current));
-//UI
-draw_set_colour($111111);
-draw_rectangle(view_wport-360,0,view_wport-1,view_hport,0);
-draw_set_colour(c_white);
-for(var i = 360;i &gt;= 0;i -= 90){
-   draw_line_width(view_wport-i,0,view_wport-i,360,2);
-}
-for(var i = 360;i &gt;= 0;i -= 90){
-   draw_line_width(view_wport-360,i,view_wport,i,2);
-}
-
-for(var i = 0;i &lt; 16;i ++){
-   var ix = 360-(i mod 4 * 90);
-   var iy = floor(i/4)*90;
-   draw_tower(i,view_wport-ix+2,iy+2,88);
-}
-
-var mx = floor((mouse_x*xrat-(view_wport-360)) / 90);
-var my = floor(mouse_y*yrat/90);
-
-if(mx &gt;= 0 &amp;&amp; my &lt; 4){
-   tower_info(mx+my*4);
-}
 </string>
           </argument>
         </arguments>
