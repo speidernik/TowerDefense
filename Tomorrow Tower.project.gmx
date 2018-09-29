@@ -6,14 +6,24 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\s_tower_mage</sprite>
-    <sprite>sprites\s_enemy_arrow</sprite>
-    <sprite>sprites\s_enemy_bomber</sprite>
-    <sprite>sprites\s_prog_mage</sprite>
     <sprite>sprites\s_pixel</sprite>
-    <sprite>sprites\s_enemy_bug</sprite>
-    <sprite>sprites\s_enemy_sheep</sprite>
-    <sprite>sprites\s_enemy_cross</sprite>
+    <sprites name="Enemy">
+      <sprite>sprites\s_enemy_sheep</sprite>
+      <sprite>sprites\s_enemy_cross</sprite>
+      <sprite>sprites\s_enemy_bug</sprite>
+      <sprite>sprites\s_enemy_bomber</sprite>
+      <sprite>sprites\s_enemy_arrow</sprite>
+    </sprites>
+    <sprites name="Tower">
+      <sprite>sprites\s_tower_fireMage</sprite>
+      <sprite>sprites\s_tower_magmaMage</sprite>
+      <sprite>sprites\s_tower_mage</sprite>
+    </sprites>
+    <sprites name="Proj">
+      <sprite>sprites\s_proj_magmaMage</sprite>
+      <sprite>sprites\s_proj_fireMage</sprite>
+      <sprite>sprites\s_proj_mage</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\b_testpath</background>
@@ -35,6 +45,8 @@
     <font>fonts\font_ui</font>
   </fonts>
   <objects name="objects">
+    <object>objects\tower</object>
+    <object>objects\control</object>
     <objects name="Enemies">
       <object>objects\enemy_arrow</object>
       <object>objects\enemy_bomber</object>
@@ -43,14 +55,18 @@
       <object>objects\enemy_bug</object>
       <object>objects\enemy</object>
     </objects>
-    <object>objects\tower</object>
     <objects name="Mage">
       <object>objects\tower_mage</object>
+      <object>objects\tower_fireMage</object>
+      <object>objects\tower_magmaMage</object>
     </objects>
-    <object>objects\control</object>
-    <object>objects\proj</object>
-    <object>objects\proj_mage</object>
-    <object>objects\part_explode</object>
+    <objects name="Proj">
+      <object>objects\proj</object>
+      <object>objects\proj_mage</object>
+      <object>objects\proj_magmaMage</object>
+      <object>objects\proj_fireMage</object>
+      <object>objects\part_explode</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\ingame</room>

@@ -56,6 +56,16 @@
     <instance objName="tower_mage" x="160" y="224" name="inst_66352E80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="tower_mage" x="96" y="224" name="inst_7E34D5B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="control" x="0" y="0" name="inst_6C05ABB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_magmaMage" x="224" y="64" name="inst_77053F59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_magmaMage" x="224" y="96" name="inst_2050BDDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_magmaMage" x="160" y="160" name="inst_38FD7497" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_magmaMage" x="160" y="0" name="inst_2BFA52A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_magmaMage" x="224" y="256" name="inst_33A12208" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_fireMage" x="128" y="64" name="inst_EB7BE87E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_fireMage" x="160" y="96" name="inst_1B2C6B39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_fireMage" x="160" y="192" name="inst_F17A45B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_fireMage" x="224" y="192" name="inst_972F63C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tower_fireMage" x="128" y="288" name="inst_D2473D56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="b_testpath" x="0" y="32" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_B227B860" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
