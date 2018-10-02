@@ -14,7 +14,6 @@ if(argument0 >= 0 && argument0 < 16){
    
    //Info Ausgeben
    if(tower_name != "" && tower_desc != "" && tower_id != -1){
-      show_debug_message(tower_name);
       draw_text(view_wport-356,400,tower_name);
       draw_set_font(font_ui);
       draw_text_ext(view_wport-356,432,tower_desc,14,340);

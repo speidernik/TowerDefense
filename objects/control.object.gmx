@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -30,6 +30,9 @@ hp = 20;
 
 wave = 0;
 current = 0;
+
+selected = 0;
+
 var arrow = 0;
 var bomber = 0;
 
@@ -109,6 +112,31 @@ alarm[0] = 60;
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(mx &lt; 0){
+   selected = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="74">
       <action>
         <libid>1</libid>
@@ -130,34 +158,46 @@ alarm[0] = 60;
 draw_set_font(font0);
 draw_text(4,2,"Wave: "+string(current));
 
+//UI Grid
 draw_set_colour($111111);
 draw_rectangle(view_wport-360,0,view_wport-1,view_hport,0);
 draw_set_colour(c_white);
-for(var i = 360;i &gt;= 0;i -= 90){
-   draw_line_width(view_wport-i,0,view_wport-i,360,2);
+for(var i = 360;i &gt;= 0;i -= 60){
+   draw_line_width(view_wport-i,0,view_wport-i,180,2);
 }
-for(var i = 360;i &gt;= 0;i -= 90){
+for(var i = 180;i &gt;= 0;i -= 60){
    draw_line_width(view_wport-360,i,view_wport,i,2);
 }
-
+//Towers in Grid
 for(var i = 0;i &lt; 16;i ++){
-   var ix = 360-(i mod 4 * 90);
-   var iy = floor(i/4)*90;
-   draw_tower(i,view_wport-ix+2,iy+2,88);
+   var ix = 360-(i mod 6 * 60);
+   var iy = floor(i/6)*60;
+   draw_tower(i,view_wport-ix+2,iy+2,58);
 }
+//Mouse from Room to UI Scale 
+mx = floor((mouse_x*xrat-(view_wport-360)) / 60);
+my = floor(mouse_y*yrat/60);
 
-var mx = floor((mouse_x*xrat-(view_wport-360)) / 90);
-var my = floor(mouse_y*yrat/90);
-
-if(mx &gt;= 0 &amp;&amp; my &lt; 4){
-   tower_info(mx+my*4);
+//Tower Info
+if(mx &gt;= 0 &amp;&amp; my &lt; 3 &amp;&amp; selected == 0){
+   tower_info(mx+my*6);
+}
+//Upgrades
+for(var i = 300;i &gt;= 60;i -= 60){
+   draw_line_width(view_wport-i,240,view_wport-i,300,2);
+}
+for(var i = 60;i &gt;= 0;i -= 60){
+   draw_line_width(view_wport-300,240+i,view_wport-60,240+i,2);
+}
+for(var i = 1;i &lt; 5;i ++){
+   draw_tower(mx+my*6+(i/10),view_wport-360+2+i*60,242,58);
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="72">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -174,7 +214,15 @@ if(mx &gt;= 0 &amp;&amp; my &lt; 4){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_path(path,0,0,1);
+            <string>if(selected){
+   with(selected){
+      draw_set_blend_mode(bm_add);
+      draw_sprite_ext(sprite_index,image_index,x-2,y-2,1.125,1.125,0,c_white,0.4);
+      draw_set_blend_mode(bm_normal);
+   }
+}
+
+draw_path(path,0,0,1);
 
 var sx = path_get_x(path,0);
 var sy = path_get_y(path,0);
@@ -183,6 +231,8 @@ var sx2 = path_get_x(path,0.01);
 var sy2 = path_get_y(path,0.01);
 
 draw_arrow(sx-1,sy-1,sx2-1,sy2-1,16);
+
+
 </string>
           </argument>
         </arguments>

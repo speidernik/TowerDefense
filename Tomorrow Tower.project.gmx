@@ -39,6 +39,7 @@
     <script>scripts\draw_tower.gml</script>
     <script>scripts\tower_info.gml</script>
     <script>scripts\tower_get_id.gml</script>
+    <script>scripts\tower_info_upgrade.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
