@@ -181,17 +181,9 @@ my = floor(mouse_y*yrat/60);
 //Tower Info
 if(mx &gt;= 0 &amp;&amp; my &lt; 3 &amp;&amp; selected == 0){
    tower_info(mx+my*6);
+   show_debug_message(mx+my*6);
 }
-//Upgrades
-for(var i = 300;i &gt;= 60;i -= 60){
-   draw_line_width(view_wport-i,240,view_wport-i,300,2);
-}
-for(var i = 60;i &gt;= 0;i -= 60){
-   draw_line_width(view_wport-300,240+i,view_wport-60,240+i,2);
-}
-for(var i = 1;i &lt; 5;i ++){
-   draw_tower(mx+my*6+(i/10),view_wport-360+2+i*60,242,58);
-}
+
 </string>
           </argument>
         </arguments>

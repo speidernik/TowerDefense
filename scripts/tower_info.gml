@@ -20,5 +20,21 @@ if(argument0 >= 0 && argument0 < 16){
       var h = string_height_ext(tower_desc,14,340)+16;
       draw_text(view_wport-356,432+h,"Damage: ");
       draw_text(view_wport-150,432+h,"Speed: ");
+      
+      //Upgrades
+      for(var i = 300;i >= 60;i -= 60){
+         draw_line_width(view_wport-i,240,view_wport-i,300,2);
+      }
+      for(var i = 60;i >= 0;i -= 60){
+         draw_line_width(view_wport-300,240+i,view_wport-60,240+i,2);
+      }
+      
+      if(floor(argument0*100) == argument0*100){var mag = 1000};
+      if(floor(argument0*10) == argument0*10){var mag = 100};
+      if(floor(argument0) == argument0){var mag = 10};
+      
+      for(var i = 1;i < 5;i ++){
+         draw_tower(argument0+(i/(mag)),view_wport-360+2+i*60,242,58);
+      }
    }
 }
